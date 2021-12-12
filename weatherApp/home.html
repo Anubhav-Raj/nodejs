@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="wave -one"></div>
+        <div class="wave -two"></div>
+        <div class="wave -three"></div>
+
+        <div id="weathercon">
+            <i class="fas fa-sun" style="color: #eccc68;"></i>
+        </div>
+        <div class="info">
+            <h2 class="location"><i class="fas fa-street-view" style="color: #fff;">Delhi,In</i></h2>
+            <p id="date"></p>
+            <h1 class="temp">26.40'C</h1>
+            <h3 class="tempmin_max">MIN 26.49C | Max 26.49'C</h3>
+        </div>
+    </div>
+    <script>
+        const d = new Date();
+        const days = ["SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"];
+
+        let day = days[d.getDay()];
+
+        const month = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+        let months = month[d.getMonth()];
+
+        let date = d.getDate();
+
+        let hours = d.getHours();
+        let min = d.getMinutes();
+        let period = "AM";
+        if (hours > 11) {
+            period = "PM";
+            if (hours > 12)
+                hours -= 12;
+        }
+        if (min < 10) {
+            min = "0" + min;
+        }
+        const curdata = document.getElementById("date");
+        //console.log(months);
+        curdata.innerHTML = `${day} | ${months} ${date} | ${hours}:${min} ${period}`;
+
+        let weathercon = document.getElementById("weathercon");
+        const tempStatus = "cloude";
+    </script>
+
+</body>
+
+</html>

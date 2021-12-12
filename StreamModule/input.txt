@@ -1,0 +1,8 @@
+Simple Employee json data
+Here is a sample JSON file called EmployeeData.json, which contains the JSON array of the employees in the organization. The content of the JSON file is as follows:
+
+In this Employee JSON example, we will look at how we can easily store values in a file using key-value pair with the help JSON format.
+
+In JSON file Using the key-value pair notation, we can store all types of value including strings, arrays, etc.
+
+Of course, one limitation is that we cannot store video, audio, or compressed data as we know that a JSON file is a text file we can edit JSON using any text editor.
